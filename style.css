@@ -1,3 +1,4 @@
+/* Skeleton Animation provided in instructions */
 @keyframes shimmer {
     0% { background-position: -200% 0; }
     100% { background-position: 200% 0; }
@@ -8,5 +9,13 @@
     background-size: 200% 100%;
     animation: shimmer 1.5s infinite;
     border-radius: 4px;
-    color: transparent !important; 
+    color: transparent !important;
 }
+
+.container { max-width: 800px; margin: 0 auto; font-family: sans-serif; padding: 20px; }
+.search-container { margin-bottom: 20px; }
+.card { border: 1px solid #ddd; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+.forecast-row { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 10px; }
+.forecast-card { border: 1px solid #ddd; padding: 10px; min-width: 100px; text-align: center; border-radius: 8px; }
+.error-text { color: red; font-size: 0.8em; }
+.error-banner { background: #fee; border: 1px solid red; padding: 15px; margin-top: 20px; border-radius: 5px; }
