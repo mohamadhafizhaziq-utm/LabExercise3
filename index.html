@@ -1,11 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherNow - Real-Time Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-	
+    <div class="container">
+        <h1>WeatherNow</h1>
+        
+        <div class="search-container">
+            <input type="text" id="cityInput" placeholder="Enter city name (e.g., London)">
+            <button id="searchBtn">Search</button>
+            <p id="validationMsg" class="error-text" style="display:none;">Please enter at least 2 characters.</p>
+        </div>
+
+        <div id="currentWeather" class="card">
+            <h2 id="cityName" class="skeleton-text">City Name</h2>
+            <div class="weather-info">
+                <div id="temp" class="temp skeleton-text">--°C</div>
+                <div id="description" class="skeleton-text">Condition</div>
+                <p>Humidity: <span id="humidity" class="skeleton-text">--%</span></p>
+                <p>Wind Speed: <span id="wind" class="skeleton-text">-- km/h</span></p>
+                <p>Local Time: <span id="localTime" class="skeleton-text">--:--</span></p>
+            </div>
+        </div>
+
+        <div id="forecastRow" class="forecast-row">
+            </div>
+
+        <div id="errorBanner" class="error-banner" style="display:none;">
+            <p id="errorMsg"></p>
+            <button onclick="location.reload()">Retry</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
 </body>
 </html>
